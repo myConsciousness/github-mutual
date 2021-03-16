@@ -17,8 +17,22 @@ import requests
 
 class Gitual:
 
-    def __init__(self):
-        pass
+    def __init__(self, user_name: str, per_page=100):
+        """The constructor.
+
+        Args:
+            user_name (str): The user name of GitHub
+            per_page (int, optional): Number of cases to be retrieved. Defaults to 100.
+        """
+
+        self.user_name = user_name
+        self.per_page = per_page
+
+    def getFollowers():
+        return requests.get('https://api.github.com/users/{}/followers?per_page={}'.format(self.user_name, self.per_page)).json()
+
+    def getFollowing():
+        return requests.get('https://api.github.com/users/{}/following?per_page={}'.format(self.user_name, self.per_page)).json()
 
 
 if __name__ == '__main__':
