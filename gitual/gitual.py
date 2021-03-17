@@ -9,9 +9,6 @@ or implied. See the License for the specific language governing permissions and 
 the License.
 """
 
-from os import getenv
-import re
-import subprocess
 import requests
 
 
